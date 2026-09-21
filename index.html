@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#a30716" />
+  <meta name="description" content="PG13 — Plataforma de Gestão do 13.º Congresso da FRELIMO. Protótipo demonstrativo." />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>PG13 — Plataforma de Gestão</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23a30716'/%3E%3Cpath d='M17 45V18h17c9 0 14 5 14 13s-5 13-14 13h-8v-8h8c3 0 5-2 5-5s-2-5-5-5h-8v19z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script src="app.js"></script>
+  <script>
+    (() => {
+      const expiresAt = new Date('2026-09-23T01:28:21.6736231+02:00').getTime();
+      const enforceExpiry = () => {
+        if (Date.now() < expiresAt) return;
+        document.body.innerHTML = '<main style="min-height:100vh;display:grid;place-items:center;padding:24px;background:#f4f5f7;font-family:Inter,Segoe UI,Arial,sans-serif;color:#17191f"><section style="width:min(520px,100%);background:white;border:1px solid #e7e9ee;border-top:6px solid #a30716;border-radius:16px;padding:36px;box-shadow:0 20px 50px rgba(21,25,34,.12);text-align:center"><strong style="display:block;color:#a30716;letter-spacing:.12em;font-size:.72rem">PG13 · ACESSO TEMPORÁRIO</strong><h1 style="margin:14px 0 10px">Esta demonstração expirou</h1><p style="margin:0;color:#69707d;line-height:1.6">O prazo de visualização de 24 horas terminou. Solicite um novo link ao responsável pela apresentação.</p></section></main>';
+      };
+      enforceExpiry();
+      window.addEventListener('hashchange', () => setTimeout(enforceExpiry, 0));
+      setInterval(enforceExpiry, 30000);
+    })();
+  </script>
+</body>
+</html>
